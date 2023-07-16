@@ -1,0 +1,208 @@
+:root{
+    --white:#ffffff;
+    --dablue: #222831;
+    --blue:#2e55ba; 
+    --accentblack:#313131;
+    --yellow:#FFD369;
+    --yellow:#FFD369;
+    --addgray:#DBD0C0;
+    --gray:#FAEEE0;
+    --beige:#F9CF93;
+    --lbeige:#FAEEE0;
+
+    --white-light:#ffffff;
+    --blue-light:#2e55ba;
+    --accentblack-light:#313131;
+    --yellow-light:#FFD369;
+    --gray-light:#f4f1f1;
+    --addgray-light:#e3e3e3;
+    --beige-light:#F9CF93;
+    --lbeige-light:#FAEEE0;
+
+    --white-dark:#ffffff;
+    --blue-dark:#2e55ba;
+    --accentblack-dark:#313131;
+    --yellow-dark:#FFD369;
+    --gray-dark:#f4f1f1;
+    --addgray-dark:#e3e3e3;
+    --beige-light:#F9CF93;
+    --lbeige-light:#FAEEE0;
+}
+
+@media(prefers-color-scheme: dark){
+    :root{
+        --white: var(--white-dark);
+        --blue: var(--blue-dark);
+        --accentblack: var(--accentblack-dark);
+        --red: var(--red-dark);
+        --gray: var(--gray-dark);
+    }
+}
+
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+
+*{
+    font-family: 'Inter';
+}
+
+.flexlogin{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    background-color: #393E46;
+}
+
+
+.loginlogo{
+    width: 4vw;
+    height: 4.4vw;
+    margin-right: 1vw;
+    margin-top: 0.74vw;
+    align-items: center;
+}
+
+.loginimg{
+    width: 40%;
+    object-fit: cover;
+    background-color: var(--accentblack);
+    transition: all 1s;
+}
+
+.loginimg:hover{
+    filter: brightness(70%);
+}
+
+.modallogin{
+    height: 50%;
+    width: 100%;
+    position: relative;
+    margin-left: 1.4vw;
+    padding-right: 2vw;
+}
+
+.login-header{
+    text-align: left;
+    margin-bottom: 4.44vw;
+    margin-top: 3vw;
+}
+
+.logo-h1{
+    display: flex;
+    gap: 8px;
+    font-size: 1.7vw;
+    font-weight: 600;
+    text-align: left;
+    line-height: 2vw;
+    color: var(--white);
+}
+
+.logo-h1 span{
+    color: var(--yellow);
+}
+
+.logo-p{
+    font-size: 1vw;
+    text-align: left;
+    margin-top: 0.6vw;
+    color: #EDEDED;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.48vw;
+    font-size: 1.33vw;
+    font-weight: 600;
+    width: 100%;
+}
+
+.form input{
+    height: 2.7vw;
+    width: 100%;
+    border-radius: 5px;
+    padding-left:0.74vw;
+    padding-bottom: 0.74vw;
+    margin-bottom: 0.74vw;
+    font-size: 1.1vw;
+    font-weight: 500;
+    border: none;
+    transition:  all .3s linear; 
+    outline: none;
+    background-color: #FFD36945;
+    color: #EDEDED;
+}
+
+.form input::placeholder{
+    color: #EDEDED;
+    font-size: 1.1vw;
+    font-weight: 500;
+}
+
+.form label{
+    font-weight: 600;
+    font-size: 1vw;
+    color:#FFD369 ;
+}
+
+.form div{
+    display: flex;
+    flex-direction: column;
+    gap:6px;
+}
+
+.login-button{
+    width:  auto;
+    min-width:  100px;
+    border-radius: 10px; 
+    text-align:  center; 
+    padding: 0.8vw;
+    margin-top:  0.37vw; 
+    background-color: var(--yellow); 
+    color:  var(--dablue); 
+    font-size:  1.2vw;
+    margin-left:  auto; 
+    font-weight:  600; 
+    box-shadow:  0px 2px 6px -1px rgba(0,0,0,.13); 
+    border:  none;
+    transition:  all .3s ease; 
+    outline: 0; 
+    margin-right: 1.11vw;
+    cursor: pointer;
+}
+  .login-button:hover{
+        transform:  translateY(-0.22vw);
+        box-shadow:  0 2px 6px -1px rgba($primary, .65);
+  }
+
+  .login-button:active{
+    transform:  scale(.99);
+  }
+
+.close-logo{
+    position: absolute;
+    font-size: 2.4vw;
+    color: #C4C4C4;
+    transform: rotate(45deg);
+    right: 1.3vw;
+    cursor: pointer;
+    top:0;
+}
+
+.errorp{
+    color: var(--yellow);
+    font-size: 1vw;
+    margin-top: -0.22vw;
+    font-weight: 500;
+    margin-left: 0.3vw;
+}
+
+.errord{
+    color: var(--yellow);
+    font-size: 1vw;
+    margin-top: -2vw;
+    padding-bottom: 1vw;
+    font-weight: 500;
+    margin-left: 2vw;
+}
